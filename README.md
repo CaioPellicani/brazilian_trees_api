@@ -1,0 +1,1 @@
+Um pequeno projeto para treinar Python e APIs REST
