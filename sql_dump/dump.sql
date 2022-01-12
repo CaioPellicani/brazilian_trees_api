@@ -6,18 +6,19 @@ INSERT INTO tb_botanical_family VALUES( 1, "Arecaceae" );
 INSERT INTO tb_botanical_family VALUES( 2, "Fabaceae" );
 INSERT INTO tb_botanical_family VALUES( 3, "Lecythidaceae" );
 INSERT INTO tb_botanical_family VALUES( 4, "Meliaceae" );
+INSERT INTO tb_botanical_family VALUES( 5, "Bignoniaceae" );
 
 INSERT INTO tb_trees VALUES( 1, "Euterpe precatoria", 20, 3, 1 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Açai da Mata", 1 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Açai Solteiro", 1 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Açai do Para", 1 );
 
-INSERT INTO tb_trees VALUES( 2, "Handroanthus heptaphyllus", 20, 2 , 2);
+INSERT INTO tb_trees VALUES( 2, "Handroanthus heptaphyllus", 20, 2 , 5 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Ipe Roxo", 2 );
 
 INSERT INTO tb_trees VALUES( 3, "Schizolobium amazonicum", 40, 1, 2 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Paricá", 3 );
-INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Ppinho Cuiabano", 3 );
+INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Pinho Cuiabano", 3 );
 
 INSERT INTO tb_trees VALUES( 4, "Stryphnodendron pulcherrimum", 15, 1, 2 );
 INSERT INTO tb_popular_names ( popular_name, tree ) VALUES( "Baginha", 4 );
