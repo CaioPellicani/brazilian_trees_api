@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify, make_response, abort
 from modules.db import get_db_connection
 from models.tree import Tree
-import sqlite3
 
 RootRoute = Blueprint('root', __name__,)
 
@@ -13,7 +12,7 @@ def test():
            ( SELECT popular_name FROM tb_popular_names WHERE tree = t.id) AS popular_name\
            FROM tb_trees t\
            LEFT JOIN tb_ecological_class e ON e.id = t.ecological_class\
-           LEFT JOIN tb_botanical_family f ON f.id = t.botanical_family where t.id=15"
+           LEFT JOIN tb_botanical_family f ON f.id = t.botanical_family"
     trees = conn.execute( query ).fetchall()
     if( len( trees ) == 0 ):
         return make_response( jsonify({'error':'not found'}) ), 404
