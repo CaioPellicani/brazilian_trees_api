@@ -8,10 +8,13 @@ from modules.commons import error404
 routeTrees = Blueprint('trees', __name__,)
 
 def getMaker( data ):
-    result = [{"timestamp": datetime.now()}] 
-    result.append( getTreesBy( data ) )
-    if( len( result ) == 0 ):
+    result = [{"timestamp": datetime.now()}]
+    treeList = getTreesBy( data )
+    
+    if( len( treeList ) == 0 ):
         return error404( data )
+
+    result.append(treeList)
     return make_response( jsonify(result) )   
 
 
