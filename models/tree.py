@@ -1,4 +1,3 @@
-from flask import jsonify, make_response
 from markupsafe import string
 from modules.db import get_db_connection
 
@@ -12,6 +11,7 @@ class Tree:
 
     def get( self ):
         result={
+            'id' : self.id,
             'scientific_name' : self.scientific_name,
             'height_max'      : self.height_max,
             'ecological_class': self.ecological_class,
