@@ -21,7 +21,7 @@ def getTreesBy( data ):
     for atributes in data :
         if( flag == True ) : where += " AND "
         flag = True
-        where += lut_convet[atributes] + " = '%s'" % data[ atributes ]
+        where += lut_convet[ atributes ] + " = '%s'" % data[ atributes ]
 
     if( flag == True) : query += " %s" % where
     print (query)
