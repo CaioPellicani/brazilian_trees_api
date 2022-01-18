@@ -27,3 +27,8 @@ class Tree:
 
         conn.close()   
         return result
+    
+    def post( self, data ):
+        result = []
+    
+        return result

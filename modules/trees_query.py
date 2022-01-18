@@ -1,8 +1,7 @@
 from flask import Blueprint, jsonify, make_response, abort
 from markupsafe import string
 from modules.db import get_db_connection
-from models.tree import Tree
-
+from models.class_tree import Tree
 
 def getTreesBy( data ):
     lut_convet={"id":"t.id", 
