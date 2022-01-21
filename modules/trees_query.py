@@ -4,10 +4,12 @@ from modules.db import get_db_connection
 from models.class_tree import Tree
 
 def getTreesBy( data ):
-    lut_convet={"id":"t.id", 
-                "scientific_name" : "t.scientific_name", 
-                "ecological_class" : "e.ecological_class", 
-                "botanical_family" : "f.botanical_family"}
+    lut_convet={
+        "id"               : "t.id", 
+        "scientific_name"  : "t.scientific_name", 
+        "ecological_class" : "e.ecological_class", 
+        "botanical_family" : "f.botanical_family"
+    }
 
     result=[]
     where = ' WHERE '
@@ -24,11 +26,10 @@ def getTreesBy( data ):
         where += lut_convet[ atributes ] + " = '%s'" % data[ atributes ]
 
     if( flag == True) : query += " %s" % where
-    print (query)
     trees = conn.execute( query ).fetchall()
     for tree in trees:
-        obj = Tree( tree )
+        obj = Tree( dict( tree ) )
         result.append( obj.get() )
     conn.close()
-
+    
     return result
