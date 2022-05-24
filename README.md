@@ -10,11 +10,9 @@ Alunos:
 
 ### Para executar utilize o comandando : `flask run`
 
-<br>
-
 ---
 
-
+<br>
 ## Requisitos
 
 * Implementar uma aplicação que contenha pelo menos dez interfaces gráficas (UI).
