@@ -13,7 +13,10 @@ routeTrees = Blueprint('trees', __name__,)
 @routeTrees.route( '/', methods = [ 'GET', 'POST', 'PUT' ] )
 def trees_root():
     if( request.method == 'GET' ):
-        return getMaker( json.loads( request.data ) )
+        data = {}
+        if( request.data ):
+            data = json.loads( request.data )
+        return getMaker( data )
 
     if( request.method == 'POST' ):
         data = json.loads( request.data )
