@@ -4,9 +4,18 @@ Alunos:
 * Aline Mizumukai
 * Caio Damasceno Pellicani
 
+<br>
+
 ---
 
-# Requisitos
+### Para executar utilize o comandando : `flask run`
+
+<br>
+
+---
+
+
+## Requisitos
 
 * Implementar uma aplicação que contenha pelo menos dez interfaces gráficas (UI).
     - O tipo de UI pode ser definido pelos integrantes: Console, Formulário ou Web.
