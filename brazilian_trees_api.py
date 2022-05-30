@@ -1,10 +1,9 @@
 from genericpath import exists
 from flask import Flask
 from back.modules.db import create_db
-from routes.routes import Api
+from back.routes.routes import Api
 
-if( not exists( "database.db" ) ):
-    create_db()
+create_db()
 
 app = Flask(__name__)
 

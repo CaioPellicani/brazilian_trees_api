@@ -1,7 +1,7 @@
 from flask import Blueprint
-from routes.root_route import RootRoute
-from routes.trees_routes import routeTrees
-from routes.greetings import Greetings
+from back.routes.root_route import RootRoute
+from back.routes.trees_routes import routeTrees
+from back.routes.greetings import Greetings
 
 Api = Blueprint('routes', __name__,)
 
