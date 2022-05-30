@@ -1,5 +1,5 @@
 from genericpath import exists
-from flask import Flask, make_response, jsonify
+from flask import Flask, make_response, jsonify, render_template
 from routes.root_route import RootRoute
 from routes.trees_routes import routeTrees
 from modules.db import create_db
@@ -14,7 +14,7 @@ app.register_blueprint(routeTrees, url_prefix='/trees')
 
 @app.route('/' )
 def greetings():
-    return make_response( jsonify(  
+    return render_template("menu.html", data=  
         {   
             "Authors":{
                 "institution":"Fatec Ribeirão Preto",
@@ -54,4 +54,5 @@ def greetings():
             
             }
         }
-    )) 
+    )
+     

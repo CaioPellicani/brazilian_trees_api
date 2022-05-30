@@ -1,8 +1,8 @@
-from crypt import methods
+#from crypt import methods
 from ctypes import sizeof
 import dataclasses
 from datetime import datetime
-from flask import Blueprint, jsonify, make_response, request, json
+from flask import Blueprint, jsonify, make_response, request, json, render_template
 from itsdangerous import json
 from models.class_tree import Tree
 from modules.trees_query import getTreesBy
@@ -55,11 +55,11 @@ def getMaker( data ):
 
     #result["data"].append(treeList)
 
-    return make_response( jsonify(result) )
+    return render_template("grid.html", result = result)
 
 @routeTrees.route('/id/<data>' )
 def trees_id(data): 
-    return getMaker( { "id": data } )
+    return getMaker( { "id": data } ) 
 
 @routeTrees.route('/scientific_name/<data>' )
 def trees_sci_name(data): 
