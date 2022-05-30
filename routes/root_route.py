@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, make_response, abort
-from modules.db import get_db_connection
+from back.modules.db import get_db_connection
 from models.class_tree import Tree
 
 RootRoute = Blueprint('root', __name__,)

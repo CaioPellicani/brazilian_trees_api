@@ -1,7 +1,4 @@
-from typing import Dict, List
-from flask import json
-from markupsafe import string
-from modules.db import get_db_connection
+from back.modules.db import get_db_connection
 
 class Tree:
     def __init__( self, data ):

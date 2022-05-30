@@ -1,12 +1,9 @@
-from crypt import methods
-from ctypes import sizeof
-import dataclasses
 from datetime import datetime
 from flask import Blueprint, jsonify, make_response, request, json
 from itsdangerous import json
 from models.class_tree import Tree
-from modules.trees_query import getTreesBy
-from modules.commons import error404
+from back.modules.trees_query import getTreesBy
+from back.modules.commons import error404
 
 routeTrees = Blueprint('trees', __name__,)
 
