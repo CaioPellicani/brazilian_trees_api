@@ -55,7 +55,7 @@ def getMaker( data ):
 
     #result["data"].append(treeList)
 
-    return render_template("grid.html", result = result)
+    return make_response( jsonify(result) )
 
 @routeTrees.route('/id/<data>' )
 def trees_id(data): 

@@ -14,7 +14,7 @@ app.register_blueprint(routeTrees, url_prefix='/trees')
 
 @app.route('/' )
 def greetings():
-    return render_template("menu.html", data=  
+    return make_response( jsonify(  
         {   
             "Authors":{
                 "institution":"Fatec Ribeirão Preto",
@@ -54,5 +54,5 @@ def greetings():
             
             }
         }
-    )
+    ))
      
