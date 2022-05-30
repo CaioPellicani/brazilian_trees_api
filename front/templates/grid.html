@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container p-3">
+    <form class="row g-3 p-2" action="">
+        <div class="col-auto">            
+            <input type="text" class="form-control" name="id" placeholder="Id">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-outline-success mb-3">Search</button>
+        </div>
+    </form>
+    <div class="grid">
+        <div class="row p-2 bg-success bg-opacity-10 text-dark fs-5">
+            <div class="col-1">Id</div>
+            <div class="col-2">Botanical Family</div>
+            <div class="col-2">Ecological Class</div>
+            <div class="col-2">Scientific Name</div>
+            <div class="col-2">Maximum Height</div>
+            <div class="col-2">Popular Name</div>
+            <div class="col-1"></div>
+        </div>
+        {% for i in result.data[0] %}
+        <div class="row p-2 border-bottom border-success border-opacity-50">
+            <div class="col-1">
+                {{ i.get('id') }}
+            </div>
+            <div class="col-2">
+                {{ i.get('botanical_family') }}
+            </div>
+            <div class="col-2">
+                {{ i.get('ecological_class') }}
+            </div>
+            <div class="col-2">
+                {{ i.get('scientific_name') }}
+            </div>
+            <div class="col-2">
+                {{ i.get('height_max') }}
+            </div>
+            <div class="col-2">
+                {{ i.get('popular_name') }}
+            </div>
+            <div class="col-1">
+                <a class="btn btn-sm btn-outline-success" href="#">
+                    <i class="bi bi-pencil-square"></i>
+                </a>
+                <a class="btn btn-sm btn-outline-success" href="#">
+                    <i class="bi bi-trash3"></i>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <p class="p-2 fs-6 fst-italic text-end">Consulta realizada em {{ result.timestamp.strftime("%d/%m/%Y %H:%M") }}
+    </p>
+    <div class="d-flex justify-content-md-end p-2" role="voltar">
+        <a class="btn btn-outline-success" type="submit" href="/">Voltar</a>
+    </div>
+</div>
+{% endblock %}
