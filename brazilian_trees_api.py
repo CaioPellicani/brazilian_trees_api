@@ -6,7 +6,7 @@ from front.routes.routes import Render
 
 create_db()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./front/templates")
 
 app.register_blueprint( Api, url_prefix='/api' )
 

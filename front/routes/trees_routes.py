@@ -1,9 +1,6 @@
 from datetime import datetime
-from flask import Blueprint, jsonify, make_response, request, json
-from itsdangerous import json
-from back.models.class_tree import Tree
-from back.modules.trees_query import getTreesBy
-from back.modules.commons import error404
+from flask import Blueprint, jsonify, make_response, request, json, render_template
+
 
 routeTrees = Blueprint('trees', __name__,)
 
