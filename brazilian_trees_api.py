@@ -1,8 +1,8 @@
 from genericpath import exists
 from flask import Flask
-from back.modules.db import create_db
-from back.routes.routes import Api
-from front.routes.routes import Render
+from back import create_db
+from back import Api
+from front import Render
 
 create_db()
 
