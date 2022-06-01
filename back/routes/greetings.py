@@ -18,27 +18,32 @@ def greetings():
                     {  
                         "Route":"/",
                         "methods":["GET"],
-                        "description":"retorna essa mensagem"
+                        "description":"Retorna essa mensagem",
+                        "title": "Página Inicial"
                     },
                     {  
                         "Route":"/trees/id/<int>",
                         "methods":["GET", "PUT"],
-                        "description":"retorna/atualiza os dados da arvore com o <int> enviado"
+                        "description":"Retorna/atualiza os dados da arvore com o <int> enviado",
+                        "title": "Busca por código"
                     },
                     {  
                         "Route":"/trees/scientific_name/<string>",
                         "methods":["GET"],
-                        "description":"retorna os dados da arvore com o nome cientifico <string> enviado"
+                        "description":"Retorna os dados da arvore com o nome cientifico <string> enviado",
+                        "title": "Busca por nome científico"
                     },
                     {  
                         "Route":"/trees/botanical_family/<string>",
                         "methods":["GET"],
-                        "description":"retorna os dados das arvores da familia <string> enviada"
+                        "description":"Retorna os dados das arvores da familia <string> enviada",
+                        "title": "Busca por família"
                     },
                     {  
                         "Route":"/trees/ecological_class/<string>",
                         "methods":["GET"],
-                        "description":"retorna os dados das arvores da classe ecologica <string> enviada"
+                        "description":"Retorna os dados das arvores da classe ecologica <string> enviada",
+                        "title": "Busca por classe ecológica"
                     }
                 ]
             
